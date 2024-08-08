@@ -18,3 +18,11 @@ spring apis to report on a woo commerce  store
 ## credits
 
 https://themewagon.com/themes/free-bootstrap-4-admin-dashboard-template-admincast/
+
+## key endpoints
+
+http://localhost:8888/orders/revenue/average
+
+http://localhost:8888/orders/revenue/total
+
+http://localhost:8888/orders
