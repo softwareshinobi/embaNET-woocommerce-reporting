@@ -16,13 +16,13 @@
         
     </parent>
     
-    <groupId>digital.softwareshinobi</groupId>
+    <groupId>digital.softwareshinobi.embanet</groupId>
     
-    <artifactId>valorant-digital-workspace-api</artifactId>
+    <artifactId>embanet-woocommerce-reporting-apis</artifactId>
     
     <version>1.0</version>
     
-    <name>valorant-digital-workspace-api</name>
+    <name>embanet-woocommerce-reporting-apis</name>
     
     <description>valorant-digital-workspace-api description</description>
 

@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 @Transactional(rollbackOn = {SQLException.class})
 public class OrderService {
 
-    OrdersRepository ordersRepository;
+    OrderRepository ordersRepository;
 
     @Autowired
-    public OrderService(OrdersRepository ordersRepository) {
+    public OrderService(OrderRepository ordersRepository) {
 
         this.ordersRepository = ordersRepository;
 
