@@ -1,0 +1,17 @@
+services:
+
+    embanet-woocommerce-reporting-apis:
+
+        container_name: embanet-woocommerce-reporting-apis
+
+        image: softwareshinobi/embanet-woocommerce-reporting-apis
+
+        build: 
+
+            context: .
+
+            dockerfile: Dockerfile
+
+        ports:
+
+            - 8080:80

@@ -1,0 +1,16 @@
+
+<aside class="control-sidebar control-sidebar-dark">
+
+<h4>Current Project</h4>
+
+<div id="projectBannerArea" class="btn-group-vertical col-12">
+
+<button id="projectBanner" disabled type="button" class="btn btn-lg btn-success">--</button>
+
+</div>
+
+<h4>Select Project</h4>
+
+<div id="projectSwitcherArea" class="btn-group-vertical col-12"></div>
+
+</aside>

@@ -1,0 +1,192 @@
+<!-- Main Sidebar Container -->
+
+<aside class="main-sidebar sidebar-darkrrr-primary elevation-4">
+
+<!-- Brand Logo -->
+
+<a href="/index.html" class="brand-link">
+
+<img src="https://github.com/softwareshinobi/assets.softwareshinobi.digital/blob/production/imagery/valorantdigital/valorant.png?raw=true" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
+
+<span class="brand-text font-weight-light">
+
+Workspace
+
+</span>
+
+</a>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<!-- Sidebar user (optional) -->
+
+<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+
+<div class="image">
+
+<img src="https://avatars.githubusercontent.com/u/45909594?v=4" class="img-circle elevation-2" alt="Software Shinobi">
+
+</div>
+
+<div class="info">
+
+<a href="#" class="d-block">
+
+software shinobi
+
+</a>
+
+</div>
+
+</div>
+
+<!-- SidebarSearch Form -->
+
+<div style="visibility:hidden" class="form-inline">
+
+<div class="input-group" data-widget="sidebar-search">
+
+<input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      
+	  <nav class="mt-2">
+	  
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+		
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+       
+		          <li class="nav-header">Work Space</li>
+
+		<li class="nav-item menu-open">
+		
+            <a class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+
+Current Activities
+
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+
+                      <li class="nav-item">
+                <a href="/story/inprogress.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>In Progress</p>
+                </a>
+              </li>
+
+
+
+     <li class="nav-item">
+                <a href="/story/completed.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Score Board</p>
+                </a>
+              </li>
+
+
+              
+            </ul>
+          </li>
+       
+</li>		          <li class="nav-header">Productivity</li>
+
+
+		<li class="nav-item ">
+		
+            <a class="nav-link">
+              <i class="nav-icon fas fa-columns"></i>
+              <p>
+
+agile
+
+<i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+
+
+            <ul class="nav nav-treeview">
+
+
+
+        <li class="nav-item">
+                <a href="/project/kanban.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kanban Board</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="/project/list.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Project List</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="/project/create.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Project</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="/story/create.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Story</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+		<li class="nav-item">
+		
+            <a class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+
+Help Center
+
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+
+              <li class="nav-item">
+                <a href="/story/list.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All User Stories [DNU]</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="/system/monitor.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>API Monitoring</p>
+                </a>
+              </li>
+      
+            </ul>
+          </li>
+      
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

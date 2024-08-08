@@ -1,0 +1,81 @@
+services:
+
+    embanet-woocommerce-reporting-apis-api:
+
+        container_name: embanet-woocommerce-reporting-apis-api
+        
+        image: softwareshinobi/embanet-woocommerce-reporting-apis-api:aventador
+
+        depends_on:
+
+           - embanet-woocommerce-reporting-apis-database
+
+        build: 
+
+            context: .
+
+            dockerfile: Dockerfile
+    
+        restart: always
+
+        ports:
+
+            - "8888:8888"
+
+        environment:
+
+            DB_HOST: embanet-woocommerce-reporting-apis-database
+
+            DB_NAME: valorant_digital_workspace
+
+            DB_USER: valorant_digital_workspace
+
+            DB_PASS: valorant_digital_workspace
+
+            VIRTUAL_HOST: apis.mateomontenegro.online
+
+            LETSENCRYPT_HOST: apis.mateomontenegro.online
+
+    embanet-woocommerce-reporting-apis-web:
+
+        container_name: embanet-woocommerce-reporting-apis-web
+
+        image: softwareshinobi/embanet-woocommerce-reporting-apis-web:aventador
+
+        build: 
+
+            context: web
+
+            dockerfile: Dockerfile
+
+        ports:
+
+            - 8880:80
+
+        environment:
+
+            VIRTUAL_HOST: mateomontenegro.online
+
+            LETSENCRYPT_HOST: mateomontenegro.online
+
+    embanet-woocommerce-reporting-apis-docs:
+
+        container_name: embanet-woocommerce-reporting-apis-docs
+
+        image: softwareshinobi/embanet-woocommerce-reporting-apis-docs:aventador
+
+        build: 
+
+            context: docs
+
+            dockerfile: Dockerfile
+
+        ports:
+
+            - 8882:80
+
+        environment:
+
+            VIRTUAL_HOST: docs.mateomontenegro.online
+
+            LETSENCRYPT_HOST: docs.mateomontenegro.online
