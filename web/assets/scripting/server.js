@@ -1,12 +1,4 @@
 
-//
-// backend string info. hack.
-//
-
-apiURL="http://intranet.embanet.softwareshinobi.digital:34888";
-
-apiURL="http://localhost:8888";
-
 $(document).ready(function () {
   
     // alert("1");
@@ -16,4 +8,12 @@ $(document).ready(function () {
     // console.log(Cookies.get());
 
 });
+
+//
+// backend string info. hack.
+//
+
+apiURL="http://intranet.embanet.softwareshinobi.digital:34888";
+
+//apiURL="http://localhost:8888";
 
