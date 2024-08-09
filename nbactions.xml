@@ -13,7 +13,7 @@
                 <exec.vmArgs>-DDB_HOST=intranet.embanet.softwareshinobi.digital -DDB_PORT=3306 -DDB_NAME=prv_wordpress_blog -DDB_USER=readonlyreporting -DDB_PASS=readonlyreporting</exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.appArgs></exec.appArgs>
-                <exec.mainClass>digital.softwareshinobi.embanet.ValorantDigitalWorkspace</exec.mainClass>
+                <exec.mainClass>digital.softwareshinobi.embanet.EmbaNETWooCommerceAPIs</exec.mainClass>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
@@ -30,7 +30,7 @@
                 <exec.vmArgs>-DDB_HOST=intranet.embanet.softwareshinobi.digital -DDB_PORT=3306 -DDB_NAME=prv_wordpress_blog -DDB_USER=readonlyreporting -DDB_PASS=readonlyreporting -agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.appArgs></exec.appArgs>
-                <exec.mainClass>digital.softwareshinobi.embanet.ValorantDigitalWorkspace</exec.mainClass>
+                <exec.mainClass>digital.softwareshinobi.embanet.EmbaNETWooCommerceAPIs</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
             </properties>
@@ -47,7 +47,7 @@
             <properties>
                 <exec.vmArgs>-DDB_HOST=intranet.embanet.softwareshinobi.digital -DDB_PORT=3306 -DDB_NAME=prv_wordpress_blog -DDB_USER=readonlyreporting -DDB_PASS=readonlyreporting</exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
-                <exec.mainClass>digital.softwareshinobi.embanet.ValorantDigitalWorkspace</exec.mainClass>
+                <exec.mainClass>digital.softwareshinobi.embanet.EmbaNETWooCommerceAPIs</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 <exec.appArgs></exec.appArgs>
             </properties>

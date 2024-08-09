@@ -15,7 +15,7 @@ function visualizeTraderOpenOrders() {
 
         type: "GET",
 
-        url: apiURL + "/broker/orders/" + traderName(),
+        url: apiURL + "/orders",
 
         contentType: "text/plain",
 
@@ -49,17 +49,21 @@ console.log("list",openOrderList);
 
     var html = '';
 
-    for (var i = 0; i < openOrderList.length; i++) {
+    for (var i = openOrderList.length - 1; i >= 0; i--) {
 
         html += '<tr>';
 
 html += '<td class="">' + openOrderList[i].id + '</td>';  // Integer (order ID)
-html += '<td class="">' + openOrderList[i].security.ticker + '</td>';  // String (stock symbol)
-html += '<td class="">' + openOrderList[i].type + '</td>';  // String (order type)
-html += '<td class="">' + openOrderList[i].units.toLocaleString() + '</td>';  // Number (shares) with commas
-html += '<td class="">' + openOrderList[i].partnerID + '</td>';  // Integer (related order ID)
-html += '<td class="">' + '$' + openOrderList[i].strike.toFixed(2).toLocaleString() + '</td>';  // Number (strike price) with 2 decimal places
-html += '<td class="">' + '$' + openOrderList[i].security.price.toFixed(2).toLocaleString() + '</td>';  // Number (stock price) with 2 decimal places and dollar sign
+html += '<td class="">' + openOrderList[i].billing_email + '</td>';  // String (stock symbol)
+html += '<td class="">' + openOrderList[i].date + '</td>';  // String (order type)
+
+
+      var averageRevenue = openOrderList[i].total_amount.toLocaleString('en-US', {
+                style: 'currency',
+                currency: 'USD',
+            });
+            
+html += '<td class="">' + averageRevenue + '</td>';  // Number (shares) with commas
 
         html += '</tr>';
 

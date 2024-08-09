@@ -31,7 +31,7 @@ public class Order {
 
     //  @NonNull
     @Column(name = "date_created_gmt")
-    private Date date_created_gmt;
+    private Date date;
 
     /**
      * @return the id
@@ -75,31 +75,26 @@ public class Order {
         this.total_amount = total_amount;
     }
 
-    /**
-     * @return the date_created_gmt
-     */
-    public Date getDate_created_gmt() {
-        return date_created_gmt;
+    public Date getDate() {
+        return date;
     }
 
-    /**
-     * @param date_created_gmt the date_created_gmt to set
-     */
-    public void setDate_created_gmt(Date date_created_gmt) {
-        this.date_created_gmt = date_created_gmt;
+    public void setDate(Date date) {
+        this.date = date;
     }
-
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Order{");
-        sb.append("id=").append(getId());
-        sb.append(", billing_email=").append(getBilling_email());
-        sb.append(", total_amount=").append(getTotal_amount());
-        sb.append(", date_created_gmt=").append(getDate_created_gmt());
+        sb.append("id=").append(id);
+        sb.append(", billing_email=").append(billing_email);
+        sb.append(", total_amount=").append(total_amount);
+        sb.append(", date=").append(date);
         sb.append('}');
         return sb.toString();
     }
+
+
 
 }
