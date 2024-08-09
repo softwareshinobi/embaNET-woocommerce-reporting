@@ -1,10 +1,10 @@
 services:
 
-    embanet-woocommerce-reporting-apis:
+    embanet-woocommerce-reporting-web0:
 
-        container_name: embanet-woocommerce-reporting-apis
+        container_name: embanet-woocommerce-reporting-web0
 
-        image: softwareshinobi/embanet-woocommerce-reporting-apis
+        image: embanet/embanet-woocommerce-reporting-web
 
         build: 
 
@@ -14,4 +14,14 @@ services:
 
         ports:
 
-            - 8080:80
+            - 8888:80
+
+    embanet-woocommerce-reporting-web1:
+
+        container_name: embanet-woocommerce-reporting-web1
+
+        image: embanet/embanet-woocommerce-reporting-web
+
+        ports:
+
+            - 9999:80
