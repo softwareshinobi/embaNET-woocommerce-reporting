@@ -16,10 +16,8 @@ $(document).ready(function () {
     
 });
 
-function onCalculateClick(){
-
-   // alert("onCalculateClick!");
-   
+function onDoCalculationClick(){
+  
     calculateBreakdown();
     
 }
@@ -34,12 +32,12 @@ function calculateBreakdown() {
 
 //
 
-    var motoFee = 5000;
+var motoFee = 5000;
 
-    $("#forMoto").val(motoFee.toLocaleString());
+$("#forMoto").val(motoFee.toLocaleString());
 
 var balanceMinusMoto = formInBank - motoFee;
- 
+
 //
 
     var formOtroDia = $("#formOtroDia").val();
