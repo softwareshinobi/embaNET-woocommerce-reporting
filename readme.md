@@ -3,6 +3,26 @@ spring apis to report on a woo commerce  store
 
 ## release 1
 
+the store revenue ALL TIME is calc'ing
+
+the store reveunue CURRENT DAY is calc'ing
+
+## release 2
+
+cascadr integrated
+
+Menu's cleaned up
+
+valkryie bancolombia calculator added
+
+portal page added
+
+Demo data from store revenue removed
+
+## release 3
+
+--
+
 ### security
 
 * readonly user at woocommerce database (ro @ mariadb)
