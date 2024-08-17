@@ -62,12 +62,6 @@ function calculateBreakdown() {
 
     if ($("#formDoTraer").is(':checked')) {
 
-        $("#forFritos").val("--");
-
-        $("#forTraer").val("--");
-
-    } else {
-
         var formNumFritos = $("#formNumFritos").val();
 
         console.log("#formNumFritos/ ", formNumFritos);
@@ -91,6 +85,12 @@ function calculateBreakdown() {
         forHER = forHER + charges;
 
         console.log("#forHER / ", forHER);
+
+    } else {
+
+        $("#forFritos").val("--");
+
+        $("#forTraer").val("--");
 
     }
 
