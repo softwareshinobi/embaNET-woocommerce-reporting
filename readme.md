@@ -1,8 +1,10 @@
-# woocommerce-reporting-apis
+# WooCommerce Metrics & Analytics
 
-spring apis to report on a woo commerce  store
+Internet Money tastes good. And cash flow has a nice ring to it.
 
 <img src="docs/cover.png">
+
+This project integrates with WooCommerce and WordPress to calculate store order analytics and dashboard reporting.
 
 ## release 1
 
@@ -49,3 +51,4 @@ http://localhost:8888/orders/revenue/average
 http://localhost:8888/orders/revenue/total
 
 http://localhost:8888/orders
+
