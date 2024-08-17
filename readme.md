@@ -1,5 +1,8 @@
 # woocommerce-reporting-apis
+
 spring apis to report on a woo commerce  store
+
+<img src="docs/cover.png">
 
 ## release 1
 
