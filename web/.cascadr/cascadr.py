@@ -10,6 +10,34 @@ nodeOpenName="22222"
 
 nodeCloseName="44444"
 
+def cascadeSideNavigation():
+
+	templateSectionBegin="<!-- START SIDEBAR-->"
+
+	templateSectionEnd="<!-- END SIDEBAR-->"
+
+	with open('templates/nav.sidebar.template') as templateFile:
+
+		substitutionContent = templateFile.read()
+
+	with open(fileToUpdate) as targetSubstitutionFile:
+	
+		s = targetSubstitutionFile.read()
+
+	ddd=s
+
+	ddd=re.sub(templateSectionBegin, templateSectionBegin+nodeOpenName, ddd, flags=re.DOTALL)
+
+	ddd=re.sub(templateSectionEnd, nodeCloseName+templateSectionEnd, ddd, flags=re.DOTALL)
+
+	ddd=re.sub(nodeOpenName+".*"+nodeCloseName,substitutionContent,ddd,flags=re.DOTALL)
+
+	f = open(fileToUpdate, "w")
+	
+	f.write(ddd)
+	
+	f.close()
+
 def cascadeStylingIncludes():
 
 	templateSectionBegin="<!-- head / css / begin -->"
@@ -118,32 +146,6 @@ def cascadeTopNavigation():
 	
 	f.close()
 
-def cascadeSideNavigation():
-
-	templateSectionBegin="<!-- navigation / side / begin -->"
-
-	templateSectionEnd="<!-- navigation / side / end -->"
-
-	with open('templates/navigation-side-menu.template') as templateFile:
-
-		substitutionContent = templateFile.read()
-
-	with open(fileToUpdate) as targetSubstitutionFile:
-		s = targetSubstitutionFile.read()
-
-	ddd=s
-
-	ddd=re.sub(templateSectionBegin, templateSectionBegin+nodeOpenName, ddd, flags=re.DOTALL)
-
-	ddd=re.sub(templateSectionEnd, nodeCloseName+templateSectionEnd, ddd, flags=re.DOTALL)
-
-	ddd=re.sub(nodeOpenName+".*"+nodeCloseName,substitutionContent,ddd,flags=re.DOTALL)
-
-	f = open(fileToUpdate, "w")
-	
-	f.write(ddd)
-	
-	f.close()
 
 def cascadeFlyoutContent():
 
