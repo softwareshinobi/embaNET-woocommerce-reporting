@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    resetRightForm();
+
+});
+
+function resetRightForm(){
+
     $("#toBank").val("--");
 
     $("#forMoto").val("--");
@@ -14,47 +20,63 @@ $(document).ready(function () {
 
     $("#toHER").val("--");
     
-});
-
+}
+    
 function processValkyrieForm(){
+
+  resetRightForm();
   
-    calculateBreakdown();
+  calculateBreakdown();
     
 }
 
 function calculateBreakdown() {
 
-    var formInBank = $("#formInBank").val();
 
-    console.log("#formInBank / ", formInBank);
+let usd = Intl.NumberFormat('en-US');
 
-    $("#toBank").val(formInBank.toLocaleString());
+    /////////////////
+    
+    var amountInBancolombia = $("#formInBank").val();
+    console.log("amountInBancolombia / ", amountInBancolombia);
+    
+    var formOtroDia = $("#formOtroDia").val();
+        console.log("#formOtroDia/ ", formOtroDia);
+
+    var formNumFritos = $("#formNumFritos").val();
+        console.log("#formNumFritos/ ", formNumFritos);
+
+    /////////////////
+    
+
+
+    $("#toBank").val(usd.format(amountInBancolombia));
 
     var motoFee = 5000;
 
-    $("#forMoto").val(motoFee.toLocaleString());
+    $("#forMoto").val(usd.format(motoFee));
 
-    var balanceMinusMoto = formInBank - motoFee;
+    var balanceMinusMoto = amountInBancolombia - motoFee;
 
-    var formOtroDia = $("#formOtroDia").val();
 
-    console.log("#formOtroDia/ ", formOtroDia);
+
+
 
     const number = formOtroDia || 0; // Handle null or undefined values
 
     console.log("#number/ ", number);
 
-    const formattedNumber = number == 0 ? "--" : number.toLocaleString();
+    const formattedNumber = number == 0 ? "--" : usd.format(number);
 
     console.log("#formattedNumber/ ", formattedNumber);
 
-    $("#forFaltan").val(formattedNumber);
+    $("#forFaltan").val();
 
     var credits = formOtroDia * 1;
 
     console.log("#credits / ", credits);
 
-    var forHER = (balanceMinusMoto * .25) - credits;
+    var forHER = motoFee + (amountInBancolombia * .25) - credits;
 
     console.log("#forHER / ", forHER);
 
@@ -62,23 +84,30 @@ function calculateBreakdown() {
 
     if ($("#formDoTraer").is(':checked')) {
 
-        var formNumFritos = $("#formNumFritos").val();
-
+        var formNumFritos = $("#formNumFritos").val()||0;
         console.log("#formNumFritos/ ", formNumFritos);
+        
+var numFritos = formNumFritos == 0 ? "--" : usd.format(formNumFritos* 2500);
 
-        var fritoBill = formNumFritos * 2500;
+        console.log("#numFritos/ ", numFritos);
+        
+        $("#forFritos").val(numFritos);
+   //     var fritoBill = formNumFritos ;
 
-        var formDoTraer = $("#formDoTraer").val().toLocaleString();
+        var formDoTraer = $("#formDoTraer").val();
 
         var traerFee=40000;
 
         console.log("#formDoTraer/ ", formDoTraer);
 
-        $("#forFritos").val(fritoBill.toLocaleString());
 
-        $("#forTraer").val(traerFee.toLocaleString());
 
-        var charges = fritoBill + 40000;  
+
+
+
+        $("#forTraer").val(usd.format(traerFee));
+        
+               var charges = (formNumFritos * 2500) + traerFee;  
 
         console.log("#charges / ", charges);
 
@@ -94,11 +123,11 @@ function calculateBreakdown() {
 
     }
 
-    $("#toHER").val(forHER.toLocaleString());
+    $("#toHER").val(usd.format(forHER));
 
-    var forHIM = formInBank - forHER;
+    var forHIM = amountInBancolombia - forHER;
 
-    $("#toHIM").val(forHIM.toLocaleString());
+    $("#toHIM").val(usd.format(forHIM));
 
 }
 
